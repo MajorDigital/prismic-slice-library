@@ -74,7 +74,7 @@
           "default": {
             "path": "C:\\Users\\DavsHoward\\Dropbox\\projects\\prismic-slice-library\\.slicemachine\\assets\\slices\\Button\\default\\preview.png",
             "width": 800,
-            "height": 38
+            "height": 30
           }
         }
       },
@@ -119,6 +119,98 @@
             "path": "C:\\Users\\DavsHoward\\Dropbox\\projects\\prismic-slice-library\\.slicemachine\\assets\\slices\\ContactForm\\default\\preview.png",
             "width": 800,
             "height": 517
+          }
+        }
+      },
+      "cta": {
+        "library": "slices",
+        "id": "cta",
+        "name": "Cta",
+        "description": "Cta",
+        "model": {
+          "id": "cta",
+          "type": "SharedSlice",
+          "name": "Cta",
+          "description": "Cta",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "Cta",
+              "primary": {
+                "title": {
+                  "type": "StructuredText",
+                  "config": {
+                    "single": "heading1",
+                    "label": "Title",
+                    "placeholder": "This is where it all begins..."
+                  }
+                },
+                "description": {
+                  "type": "StructuredText",
+                  "config": {
+                    "single": "paragraph",
+                    "label": "Description",
+                    "placeholder": "A nice description of your feature"
+                  }
+                }
+              },
+              "items": {
+                "button": {
+                  "type": "Link",
+                  "config": {
+                    "label": "Button",
+                    "placeholder": "",
+                    "select": null
+                  }
+                }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {
+                "button": {
+                  "link_type": "Web",
+                  "url": "https://prismic.io"
+                }
+              }
+            ],
+            "primary": {
+              "title": [
+                {
+                  "type": "heading1",
+                  "text": "President",
+                  "spans": []
+                }
+              ],
+              "description": [
+                {
+                  "type": "paragraph",
+                  "text": "Aliqua exercitation aliquip sit enim proident labore culpa fugiat ad adipisicing sint anim magna sint.",
+                  "spans": []
+                }
+              ]
+            },
+            "slice_type": "cta"
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "js"
+        },
+        "screenshotPaths": {
+          "default": {
+            "path": "C:\\Users\\DavsHoward\\Dropbox\\projects\\prismic-slice-library\\.slicemachine\\assets\\slices\\Cta\\default\\preview.png",
+            "width": 800,
+            "height": 334
           }
         }
       },
@@ -325,6 +417,87 @@
             "path": "C:\\Users\\DavsHoward\\Dropbox\\projects\\prismic-slice-library\\.slicemachine\\assets\\slices\\Quote\\default\\preview.png",
             "width": 800,
             "height": 178
+          }
+        }
+      },
+      "stats": {
+        "library": "slices",
+        "id": "stats",
+        "name": "Stats",
+        "description": "Stats",
+        "model": {
+          "id": "stats",
+          "type": "SharedSlice",
+          "name": "Stats",
+          "description": "Stats",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "Stats",
+              "primary": {
+                "title": {
+                  "type": "StructuredText",
+                  "config": {
+                    "single": "heading1",
+                    "label": "Title",
+                    "placeholder": "This is where it all begins..."
+                  }
+                }
+              },
+              "items": {
+                "detail": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Detail",
+                    "placeholder": ""
+                  }
+                },
+                "number": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Number",
+                    "placeholder": ""
+                  }
+                }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {
+                "detail": "rock",
+                "number": "zulu"
+              }
+            ],
+            "primary": {
+              "title": [
+                {
+                  "type": "heading1",
+                  "text": "Prepare",
+                  "spans": []
+                }
+              ]
+            },
+            "slice_type": "stats"
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "js"
+        },
+        "screenshotPaths": {
+          "default": {
+            "path": "C:\\Users\\DavsHoward\\Dropbox\\projects\\prismic-slice-library\\.slicemachine\\assets\\slices\\Stats\\default\\preview.png",
+            "width": 800,
+            "height": 164
           }
         }
       },

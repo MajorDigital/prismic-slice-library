@@ -312,6 +312,71 @@ type ContactFormSliceVariation = ContactFormSliceDefault;
  */
 export type ContactFormSlice = prismicT.SharedSlice<"contact_form", ContactFormSliceVariation>;
 /**
+ * Primary content in Cta → Primary
+ *
+ */
+interface CtaSliceDefaultPrimary {
+    /**
+     * Title field in *Cta → Primary*
+     *
+     * - **Field Type**: Title
+     * - **Placeholder**: This is where it all begins...
+     * - **API ID Path**: cta.primary.title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    title: prismicT.TitleField;
+    /**
+     * Description field in *Cta → Primary*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: A nice description of your feature
+     * - **API ID Path**: cta.primary.description
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    description: prismicT.RichTextField;
+}
+/**
+ * Item in Cta → Items
+ *
+ */
+export interface CtaSliceDefaultItem {
+    /**
+     * Button field in *Cta → Items*
+     *
+     * - **Field Type**: Link
+     * - **Placeholder**: *None*
+     * - **API ID Path**: cta.items[].button
+     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     *
+     */
+    button: prismicT.LinkField;
+}
+/**
+ * Default variation for Cta Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `Cta`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type CtaSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<CtaSliceDefaultPrimary>, Simplify<CtaSliceDefaultItem>>;
+/**
+ * Slice variation for *Cta*
+ *
+ */
+type CtaSliceVariation = CtaSliceDefault;
+/**
+ * Cta Shared Slice
+ *
+ * - **API ID**: `cta`
+ * - **Description**: `Cta`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type CtaSlice = prismicT.SharedSlice<"cta", CtaSliceVariation>;
+/**
  * Primary content in Image → Primary
  *
  */
@@ -445,6 +510,71 @@ type QuoteSliceVariation = QuoteSliceDefault;
  */
 export type QuoteSlice = prismicT.SharedSlice<"quote", QuoteSliceVariation>;
 /**
+ * Primary content in Stats → Primary
+ *
+ */
+interface StatsSliceDefaultPrimary {
+    /**
+     * Title field in *Stats → Primary*
+     *
+     * - **Field Type**: Title
+     * - **Placeholder**: This is where it all begins...
+     * - **API ID Path**: stats.primary.title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    title: prismicT.TitleField;
+}
+/**
+ * Item in Stats → Items
+ *
+ */
+export interface StatsSliceDefaultItem {
+    /**
+     * Detail field in *Stats → Items*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: stats.items[].detail
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    detail: prismicT.KeyTextField;
+    /**
+     * Number field in *Stats → Items*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: stats.items[].number
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    number: prismicT.KeyTextField;
+}
+/**
+ * Default variation for Stats Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `Stats`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type StatsSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<StatsSliceDefaultPrimary>, Simplify<StatsSliceDefaultItem>>;
+/**
+ * Slice variation for *Stats*
+ *
+ */
+type StatsSliceVariation = StatsSliceDefault;
+/**
+ * Stats Shared Slice
+ *
+ * - **API ID**: `stats`
+ * - **Description**: `Stats`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type StatsSlice = prismicT.SharedSlice<"stats", StatsSliceVariation>;
+/**
  * Primary content in Text → Primary
  *
  */
@@ -488,6 +618,6 @@ declare module "@prismicio/client" {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { ArticleDocumentData, ArticleDocumentDataSlicesSlice, ArticleDocument, NavigationDocumentData, NavigationDocumentDataLinksItem, NavigationDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, SettingsDocumentData, SettingsDocument, AllDocumentTypes, ButtonSliceDefaultPrimary, ButtonSliceDefault, ButtonSliceVariation, ButtonSlice, ContactFormSliceDefault, ContactFormSliceVariation, ContactFormSlice, ImageSliceDefaultPrimary, ImageSliceDefault, ImageSliceWidePrimary, ImageSliceWide, ImageSliceVariation, ImageSlice, QuoteSliceDefaultPrimary, QuoteSliceDefault, QuoteSliceVariation, QuoteSlice, TextSliceDefaultPrimary, TextSliceDefault, TextSliceVariation, TextSlice };
+        export type { ArticleDocumentData, ArticleDocumentDataSlicesSlice, ArticleDocument, NavigationDocumentData, NavigationDocumentDataLinksItem, NavigationDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, SettingsDocumentData, SettingsDocument, AllDocumentTypes, ButtonSliceDefaultPrimary, ButtonSliceDefault, ButtonSliceVariation, ButtonSlice, ContactFormSliceDefault, ContactFormSliceVariation, ContactFormSlice, CtaSliceDefaultPrimary, CtaSliceDefaultItem, CtaSliceDefault, CtaSliceVariation, CtaSlice, ImageSliceDefaultPrimary, ImageSliceDefault, ImageSliceWidePrimary, ImageSliceWide, ImageSliceVariation, ImageSlice, QuoteSliceDefaultPrimary, QuoteSliceDefault, QuoteSliceVariation, QuoteSlice, StatsSliceDefaultPrimary, StatsSliceDefaultItem, StatsSliceDefault, StatsSliceVariation, StatsSlice, TextSliceDefaultPrimary, TextSliceDefault, TextSliceVariation, TextSlice };
     }
 }

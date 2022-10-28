@@ -115,6 +115,16 @@
       "default": {
         "primary": {}
       }
+    },
+    "Cta": {
+      "default": {
+        "items": {}
+      }
+    },
+    "Stats": {
+      "default": {
+        "primary": {}
+      }
     }
   }
 }

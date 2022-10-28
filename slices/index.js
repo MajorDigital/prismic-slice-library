@@ -2,22 +2,28 @@
 
 import Button from './Button';
 import ContactForm from './ContactForm';
+import Cta from './Cta';
 import Image from './Image';
 import Quote from './Quote';
+import Stats from './Stats';
 import Text from './Text';
 
 export {
 	Button,
 	ContactForm,
+	Cta,
 	Image,
 	Quote,
+	Stats,
 	Text,
 };
 
 export const components = {
 	button: Button,
 	contact_form: ContactForm,
+	cta: Cta,
 	image: Image,
 	quote: Quote,
+	stats: Stats,
 	text: Text,
 };
