@@ -1,0 +1,13 @@
+{
+  "arrowParens": "avoid",
+  "semi": false,
+  "importOrder": [
+    "^@components=/(.*)$",
+    "^@types=/(.*)$",
+    "^@utils=/(.*)$",
+    "^@images=/(.*)$",
+    "^[./]"
+  ],
+  "importOrderSeparation": true,
+  "importOrderSortSpecifiers": true
+}
