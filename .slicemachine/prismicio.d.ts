@@ -343,15 +343,25 @@ interface CtaSliceDefaultPrimary {
  */
 export interface CtaSliceDefaultItem {
     /**
-     * Button field in *Cta → Items*
+     * Button link field in *Cta → Items*
      *
      * - **Field Type**: Link
      * - **Placeholder**: *None*
-     * - **API ID Path**: cta.items[].button
+     * - **API ID Path**: cta.items[].button_link
      * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
      *
      */
-    button: prismicT.LinkField;
+    button_link: prismicT.LinkField;
+    /**
+     * Button text field in *Cta → Items*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: cta.items[].button_text
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    button_text: prismicT.KeyTextField;
 }
 /**
  * Default variation for Cta Slice

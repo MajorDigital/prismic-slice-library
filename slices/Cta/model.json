@@ -29,12 +29,20 @@
         }
       },
       "items": {
-        "button": {
+        "button_link": {
           "type": "Link",
           "config": {
-            "label": "Button",
+            "label": "Button link",
             "placeholder": "",
+            "allowTargetBlank": false,
             "select": null
+          }
+        },
+        "button_text": {
+          "type": "Text",
+          "config": {
+            "label": "Button text",
+            "placeholder": ""
           }
         }
       },
